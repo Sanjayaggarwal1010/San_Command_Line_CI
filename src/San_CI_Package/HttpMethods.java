@@ -14,7 +14,7 @@ public class HttpMethods {
 		HttpMethods http = new HttpMethods();
 
 		System.out.println("Testing 1 - Send Http GET request");
-		http.sendGet("https://www.americanfunds.com/advisor/literature/catalog.htm?cat=44");
+		http.sendGet("https://www.americanfunds.com/advisor");
 
 		System.out.println("\nTesting 2 - Send Http POST request" + responseCode);
 	
@@ -25,7 +25,7 @@ public class HttpMethods {
 		System.out.println("Testing 1 - ************GIT************");
 		
 		System.out.println("Testing 1 - ************GIT************");
-		System.out.println("Testing 1 - ************GIT************");
+		System.out.println("Testing 1 - ************GIT************);
 		
 		System.out.println("*** First Chnage 10/10/2017***********");
 		System.out.println("*** First Chnage 17/10/2017***********");
