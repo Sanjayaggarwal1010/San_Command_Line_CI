@@ -32,6 +32,7 @@ public class HttpMethods {
 		System.out.println("*** Second Chnage 17/10/2017***********");
 		System.out.println("*** Third Chnage 17/10/2017***********");
 		System.out.println("*** Fourth Chnage 17/10/2017***********");
+		System.out.println("C:\\Users\\megha\\git\\san1010\\src\\San_CI_Package>java -classpath C:\\Users\\megha\\git\\san1010\\src San_CI_Package.HttpMethods");
 		System.out.println("\nTesting 2 - Send Http POST request");
 	}
 
