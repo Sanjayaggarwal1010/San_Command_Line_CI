@@ -22,10 +22,10 @@ public class HttpMethods {
 		
 		System.out.println("Testing 1 - ************GIT************");
 		
-		System.out.println("Testing 1 - ************GIT************");
+		System.out.println("Testing 1 - ************GIT************);
 		
 		System.out.println("Testing 1 - ************GIT************");
-		System.out.println("Testing 1 - ************GIT************);
+		System.out.println("Testing 1 - ************GIT************");
 		
 		System.out.println("*** First Chnage 10/10/2017***********");
 		System.out.println("*** First Chnage 17/10/2017***********");
