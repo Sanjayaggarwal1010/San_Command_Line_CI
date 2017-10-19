@@ -22,7 +22,7 @@ public class HttpMethods {
 		
 		System.out.println("Testing 1 - ************GIT************");
 		
-		System.out.println("Testing 1 - ************GIT************);
+		System.out.println("Testing 1 - ************GIT************");
 		
 		System.out.println("Testing 1 - ************GIT************");
 		System.out.println("Testing 1 - ************GIT************");
