@@ -42,8 +42,6 @@ public class HttpMethods {
 		System.out.println("\nTesting 2 - Send Http POST request");
 		System.out.println("\nTesting  33 - Send Http POST request");
 		System.out.println("Testing  33 - Send Http POST request updated by Sanjay today with new repo");
-		System.out.println("local change 123");
-		System.out.println("local change 12345");
 		System.out.println("local change ---- Sanjay");
 		
 	}
