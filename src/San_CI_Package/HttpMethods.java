@@ -44,6 +44,7 @@ public class HttpMethods {
 		System.out.println("Testing  33 - Send Http POST request updated by Sanjay today with new repo");
 		System.out.println("local change ---- Sanjay");
 		System.out.println("Git  change ---- Directly committed");
+		System.out.println("Git  change ---- Directly committed---- today");
 		
 	}
 
