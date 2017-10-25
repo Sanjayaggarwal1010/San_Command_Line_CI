@@ -40,6 +40,8 @@ public class HttpMethods {
 		
 		
 		System.out.println("\nTesting 2 - Send Http POST request");
+		System.out.println("\nTesting  33 - Send Http POST request");
+		
 	}
 
 	// HTTP GET request
