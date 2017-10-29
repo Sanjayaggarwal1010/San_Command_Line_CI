@@ -31,8 +31,6 @@ public class HttpMethods {
 		
 		
 		System.out.println("\nTesting 2 - Send Http POST request");
-		System.out.println("\nTesting  33 - Send Http POST request");
-		System.out.println("Testing  33 - Send Http POST request updated by Sanjay today with new repo");
 		System.out.println("local change ---- Sanjay");
 		System.out.println("Sanjay aggarwal -- master branch");
 		System.out.println("New branch sanjay");
