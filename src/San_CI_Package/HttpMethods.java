@@ -47,6 +47,7 @@ public class HttpMethods {
 		System.out.println("Git  change ---- Directly committed---- today");
 		System.out.println("Git  change ---- Directly committed---- today to test git from command line");
 		System.out.println("Sanjay aggarwal Git from CMD Test");
+                System.out.println("Sanjay aggarwal Git from CMD Test---- Latest");
 		
 	}
 
