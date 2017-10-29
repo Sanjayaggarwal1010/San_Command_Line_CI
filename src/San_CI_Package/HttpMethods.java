@@ -52,6 +52,7 @@ public class HttpMethods {
                 System.out.println("Sanjay aggarwal Git from CMD Test---- Latest-- 222");
                 System.out.println("Sanjay aggarwal -- master branch");
 		System.out.println("New branch sanjay");
+		System.out.println("Get Latest vode from Git");
 	}
 
 	// HTTP GET request
