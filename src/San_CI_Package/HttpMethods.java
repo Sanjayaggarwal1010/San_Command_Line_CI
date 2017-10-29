@@ -23,15 +23,6 @@ public class HttpMethods {
 		System.out.println("Testing 1 - ************GIT************");
 		
 		System.out.println("Testing 1 - ************GIT************");
-		
-		System.out.println("Testing 1 - ************GIT************");
-		System.out.println("Testing 1 - ************GIT************");
-		
-		System.out.println("*** First Chnage 10/10/2017***********");
-		System.out.println("*** First Chnage 17/10/2017***********");
-		System.out.println("*** Second Chnage 17/10/2017***********");
-		System.out.println("*** Third Chnage 17/10/2017***********");
-		System.out.println("*** Fourth Chnage 17/10/2017***********");
 		System.out.println("C:\\Users\\megha\\git\\san1010\\src\\San_CI_Package>java -classpath C:\\Users\\megha\\git\\san1010\\src San_CI_Package.HttpMethods");
 		
 		System.out.println("Working---C:\\Users\\megha\\git\\san1010\\src\\San_CI_Package>java -classpath C:\\Users\\megha\\git\\san1010\\src San_CI_Package.HttpMethods");
@@ -43,14 +34,7 @@ public class HttpMethods {
 		System.out.println("\nTesting  33 - Send Http POST request");
 		System.out.println("Testing  33 - Send Http POST request updated by Sanjay today with new repo");
 		System.out.println("local change ---- Sanjay");
-		System.out.println("Git  change ---- Directly committed");
-		System.out.println("Git  change ---- Directly committed---- today");
-		System.out.println("Git  change ---- Directly committed---- today to test git from command line");
-		System.out.println("Sanjay aggarwal Git from CMD Test");
-                System.out.println("Sanjay aggarwal Git from CMD Test---- Latest");
-		System.out.println("Sanjay aggarwal Git from CMD Test---- Latest-- 222");
-                System.out.println("Sanjay aggarwal Git from CMD Test---- Latest-- 222");
-                System.out.println("Sanjay aggarwal -- master branch");
+		System.out.println("Sanjay aggarwal -- master branch");
 		System.out.println("New branch sanjay");
 		System.out.println("Get Latest vode from Git");
 	}
