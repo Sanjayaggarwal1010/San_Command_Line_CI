@@ -48,7 +48,8 @@ public class HttpMethods {
 		System.out.println("Git  change ---- Directly committed---- today to test git from command line");
 		System.out.println("Sanjay aggarwal Git from CMD Test");
                 System.out.println("Sanjay aggarwal Git from CMD Test---- Latest");
-		
+		System.out.println("Sanjay aggarwal Git from CMD Test---- Latest-- 222");
+                 System.out.println("Sanjay aggarwal Git from CMD Test---- Latest-- 222");
 	}
 
 	// HTTP GET request
