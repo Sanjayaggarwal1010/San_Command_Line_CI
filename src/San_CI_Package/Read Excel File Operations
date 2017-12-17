@@ -1,0 +1,134 @@
+package JavaPackage;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.FormulaEvaluator;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ReadExcel {
+	 private static final String FILE_NAME = "C:\\Users\\megha\\Desktop\\SanExcel.xlsx";
+	 public static int responseCode = 0;
+	 private final static String USER_AGENT = "Mozilla/5.0";
+	public static void main(String args[]) throws Exception
+	{
+		Map<String, Integer> map = new HashMap<String,Integer>(); //Create map
+		FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
+		XSSFWorkbook wb= new XSSFWorkbook(excelFile);
+	    XSSFSheet ws = wb.getSheetAt(0);
+	    int numrows = ws.getPhysicalNumberOfRows();
+	    System.out.println("Number of Rows contains data==="+numrows);
+	    Row row1 = ws.getRow(0);
+	    short minColIx =  row1.getFirstCellNum();
+	    System.out.println("First Cell Index==="+minColIx);
+	    short maxColIx = row1.getLastCellNum();
+	    System.out.println("First Cell Index==="+maxColIx);
+	    for(short colIx=minColIx; colIx<maxColIx; colIx++) { //loop from first to last index
+	    	   Cell cell = row1.getCell(colIx); //get the cell
+	    	   map.put(cell.getStringCellValue(),cell.getColumnIndex()); //add the cell contents (name of column) and cell index to the map
+	    	 }
+	  int indexforcolumn = map.get("Urls");
+	  System.out.println("Index of column====" +indexforcolumn);
+	  int indexforcolumn1 = map.get("Urls");
+	  System.out.println("Index of column====" +indexforcolumn1);
+	    
+	  List<String> listOfDataFromReport = new ArrayList<String>();
+	  for(int x = 1; x<numrows; x++){
+		
+		  Row dataRow = ws.getRow(x);
+		  int idxForColumn1 = map.get("Urls"); //get the column index for the column with header name = "Column1"
+		  Cell cell1 = dataRow.getCell(idxForColumn1); //Get the cells for each of the indexes
+
+		  listOfDataFromReport.add(cell1.getStringCellValue());
+	  }
+	    
+	  System.out.println("#####################"); 
+	    
+	  FileWriter writer = new FileWriter("C:\\Users\\megha\\Desktop\\Target_today.txt"); 
+	  for(String str: listOfDataFromReport) {
+	    writer.write(str + "\r\n");
+	    writer.write("\n");
+	  }
+	  writer.close();
+	  List<Integer> ResponseList =  new ArrayList<Integer>();
+	  
+	  for(String Urlstr: listOfDataFromReport) {
+		 int responsecode = CheckUrlResponseCode(Urlstr); 
+		 ResponseList.add(responsecode);
+		 int indexforcolumnResult = map.get("Result");
+		  System.out.println("Index of column====" +indexforcolumnResult);	 
+	for(int i=1 ; i<=ResponseList.size() ; i++)
+	{
+		ws.getRow(i).createCell(indexforcolumnResult).setCellValue(ResponseList.get(i-1));
+		
+	}
+	
+	  FileOutputStream out = new FileOutputStream(FILE_NAME);
+      wb.write(out);
+      out.close();
+		 
+	  }
+	  
+	  
+	    /*
+	    FormulaEvaluator FE = wb.getCreationHelper().createFormulaEvaluator();
+	    for (Row row:ws) {
+	    	for (Cell cell:row) { 
+	    	switch (FE.evaluateInCell(cell).getCellType())	
+	    	{
+	    	case Cell.CELL_TYPE_NUMERIC:
+	    		System.out.println(cell.getNumericCellValue() + "\t\t");
+	    		break;
+	    	
+	    	case Cell.CELL_TYPE_STRING:
+	    		System.out.println(cell.getStringCellValue() + "\t\t");
+	    		break;
+	    	}
+	    	System.out.println();
+	    	}
+	    		  	
+	    }*/
+	    
+		
+	}
+	
+	// HTTP GET request
+		private static int CheckUrlResponseCode(String WebUrl ) throws Exception {
+			
+	try {
+			URL obj = new URL(WebUrl);
+			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+			// optional default is GET
+			con.setRequestMethod("GET");
+
+			//add request header
+			con.setRequestProperty("User-Agent", USER_AGENT);
+
+			 responseCode = con.getResponseCode();
+			System.out.println("\nSending 'GET' request to URL : " + WebUrl);
+			System.out.println("Response Code : " + responseCode);
+
+					
+	}
+	catch(Exception ex) 
+	{
+		   System.out.println("Bad Response for URL" + WebUrl);
+		   
+	}
+	 return responseCode;
+	}	
+	
+}
